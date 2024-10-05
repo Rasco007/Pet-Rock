@@ -1,0 +1,245 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Pet Rock</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="shortcut icon" href="icon.png"/>
+  <!-- Place favicon.ico in the root directory -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/all.min.css">    
+
+  <link rel="stylesheet" href="css/main.css">
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Oswald:wght@200;300;400;500;600;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw==" crossorigin=""></script>
+  <script src="js/jquery/dist/jquery.min.js"></script>
+
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+<!--Header-->
+<header class="site-header">
+    <div class="hero">
+        <div class="contenido-header">
+            <nav class="redes-sociales clearfix">
+                <a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                <a href="#"><i class="fab fa-tiktok" aria-hidden="true"></i></a>
+                <a href="#"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            </nav>
+            <div class="informacion-evento">
+                <div class="clearfix">
+                    <img class="pet-rock-letras" src="img/pet-rock-letras.png" alt="">
+                    <!--<h1 class="nombre-sitio"> PETROCK</h1>-->
+                </div>
+                   <!-- <img class="mascota" src="img/logo.png" alt="">-->
+                <img class="mascota" src="img/mascota.png" alt="">
+                <p class="slogan">Pensando <span>en tu mascota</span></p>
+            </div>
+            <!--.informacion-evento-->
+
+        </div>
+    </div>
+    <!--.hero-->
+</header>
+<!--Header Cierre-->
+
+
+<!--Barra-->
+<div class="barra">
+    <div class="contenedor clearfix">
+      
+
+        <nav class="navegacion-principal clearfix">
+            <div class="logo clearfix">
+                
+                <h3>PETROCK</h3>
+                    
+            </div>
+            <a href="#quienes-somos">Quienes somos</a>
+            <a href="#descuentos">Descuentos</a>
+            <a href="#donde-estamos">Donde Estamos</a>
+            <a href="#hace-tu-pedido">Hace Tu Pedido</a>
+        </nav>
+
+        <!-- Top Navigation Menu -->
+<div class="topnav">
+    <div class="logo clearfix">
+        <a href="index.html">
+                <h3>PETROCK</h3>
+            </a>
+    </div>
+    <!-- Navigation links (hidden by default) -->
+    <div id="myLinks">
+        <a href="#descuentos">Descuentos</a>
+        <a href="#donde-estamos">Donde Estamos</a>
+        <a href="#hace-tu-pedido">Hace Tu Pedido</a>
+    </div>
+    <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <div class="center">
+            <div></div>
+          </div>
+    </a>
+  </div>
+    </div>
+    <!--.contenedor-->
+</div>
+<!--Barra Cierre-->
+
+<!--Quienes somos-->
+<div class="quienes-somos" id="quienes-somos">
+  <div class="contenedor clearfix">
+    <div class="contenido-quienes-somos clearfix">
+      <div class="texto-quienes-somos">
+        <h2>¿Quienes Somos?</h2>
+        <p>Somos una tienda de alimentos y accesorios de máxima calidad para tu mascota.
+          Ubicados en la bella ciudad de Bariloche, venimos a traer una opción boutique, la cual combina la mascota con el rock. 
+          Influenciados por las modas extranjeras, Pet Rock 
+          ofrece productos únicos para que tu mascota pueda disfrutar al máximo.</p>
+      </div>
+      <div class="perro">
+        <img src="img/san-bernardo.png" alt="">
+      </div>
+      <div class="mascota-alternativa">
+          <img src="img/mascota-alternativa.png" alt="">
+        </div>
+      </div>
+  </div>
+</div>
+<!--Quienes somos Cierre-->
+
+
+
+<!-- Carousel Inicio -->
+<section class="seccion descuento">
+    <h2>descuentos</h2>
+<div class="carousel" id="descuentos">
+  <div id="carouselExampleIndicators" class="contenido-carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="img/bannerEfectivoDebito.jpg" alt="First slide">
+            <div class="carousel-caption d-none d-md-block">
+                
+            </div>
+        </div>
+        
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div> 
+ </section>
+  <!-- Carousel Cierre -->
+
+
+<!--Video-->
+<section class="video seccion" id="hace-tu-pedido">
+    <h2>Hace Tu Pedido</h2>
+  <div class="contenedor-video">
+      <video autoplay loop poster="img/video-perros.png">
+              <source src="video/video-perros.mp4" type="video/mp4">
+              <source src="video/video-perros.webm" type="video/webm">
+              <source src="video/video-perros.ogv" type="video/ogg">      
+      </video>
+     <div class="contenido-hace-tu-pedido">
+        <div class="boton-wpp">
+          <a href="https://wa.me/+5492944122626/?text=Quisiera%20hacer%20un%20pedido" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+  </div>
+  <!--.contenedor-video-->
+  
+  
+</section>
+<!--Video Cierre-->
+
+<!--Donde Estamos-->
+<section class="mapa seccion" id="donde-estamos">
+  <h2>Donde Estamos</h2>
+  <div id="map" class="mapa"></div>
+</section>
+<!--Donde Estamos Cierre-->
+
+
+ <!-- Footer Inicio -->
+ <footer class="site-footer">
+  <div class="contenedor clearfix">
+      <div class="footer-informacion">
+        <img class="mascota-footer" src="img/mascota.png" alt="">
+
+        <!--
+          <h3>Sobre <span>gdlwebcamp</span></h3>
+          <p>Praesent rutrum efficitur pharetra. Vivamus scelerisque pretium velit, id tempor turpis pulvinar et. Ut bibendum finibus massa non molestie. Curabitur urna metus, placerat gravida lacus ut, lacinia congue orci. Maecenas luctus mi at ex
+              blandit vehicula. Morbi porttitor tempus euismod.</p>
+      -->
+        </div>
+      <div class="ultimos-tweets">
+          <h3>Sobre <span>Pet Rock</span></h3>
+          <p>Pet Rock es una empresa de alimentos y accesorios para todo tipo de mascotas. Ubicada en Bariloche, buscamos ofrecer los productos de máxima calidad a nuestros clientes y que se lleven una experiencia única al salir de nuestra tienda. Además, Pet Rock ofrece un servicio de delivery donde llevamos productos a los domicilios de los clientes.</p>
+        <!--
+          <h3>Últimos <span>tweets</span></h3>
+          <a class="twitter-timeline" data-height="400" data-theme="light" data-link-color="#fe4918" href="https://twitter.com/JuanDevWP">Tweets by JuanDevWP</a>
+          <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+        -->
+        </div>
+      <div class="menu">
+          <h3>Redes <span>sociales</span></h3>
+          <nav class="redes-sociales-footer">
+              <a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+              <a href="#"><i class="fab fa-tiktok" aria-hidden="true"></i></a>
+              <a href="#"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+              <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+          </nav>
+      </div>
+  </div>
+
+  <p class="copyright">
+      Todos los derechos Reservados a Pet Rock.
+  </p> 
+</footer>
+<!-- Footer Cierre -->
+<script  type="text/javascript" src="js/jquery.js"></script>
+
+  <script src="js/hamburguermenu.js"></script>
+  <script src="js/vendor/modernizr-3.8.0.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js" ></script>
+  <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCK-Pl7HA4upBOHWFRRbE0xZ9WGnz5teQ4&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
+    
+</body>
+
+</html>

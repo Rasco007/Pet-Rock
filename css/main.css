@@ -1,0 +1,903 @@
+/*! HTML5 Boilerplate v7.3.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+  /*GLOBALES*/
+  html{
+  box-sizing: border-box;/* Modelo caja - si agregamos un Padding no nos afecta */ 
+  }
+  *,* :before, *:after{
+    box-sizing: inherit; /*el inherit cancela todo estilo*/
+  }
+  body{
+    background: #f2f2f2;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  .contenedor{
+    width: 98%; /*para q en el movil no se expanda tanto*/
+    margin: 0 auto;
+  }
+  @media only screen and (min-width: 480px){
+    .contenedor{
+      width: 95%; /*para q en el movil no se expanda tanto*/
+    }
+  }
+  @media only screen and (min-width: 768px){
+    .contenedor{
+      width: 90%; /*para q en el movil no se expanda tanto*/
+    }
+  }
+  @media only screen and (min-width: 992px){
+    .contenedor{
+      width: 90%; /*para q en el movil no se expanda tanto*/
+      max-width: 1100px; /*para que no se vaya muy a la orilla*/
+    }
+  }
+
+  .seccion {
+    padding: 30px 0;
+  }
+  h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.4em;
+    text-transform: uppercase;
+    text-align: center;
+}
+  h2::after {
+    content: '';
+    margin: 0 auto;
+    background-image: url(../img/separador.png);
+    height: 30px;
+    width: 100px;
+    display: block;
+  }
+  
+
+  /*Header*/
+  div.hero {
+    background-image: url(../img/vista-bariloche.jpg);
+    height: 70vh;
+    background-position: top center;
+    background-size: cover;
+  }
+  div.contenido-header {
+    padding-top: 40px;
+  }
+  @media only screen and (min-width:768px) {
+    div.contenido-header {
+      padding-top: 10px;
+    }
+  }
+  nav.redes-sociales {
+    text-align: center;
+    padding-top: 20px;
+   
+  }
+  nav.redes-sociales a {
+    position: relative;
+    width: 90px;
+    height: 90px;
+    display: inline-block;
+    text-align: center;
+    margin: 0 10px;
+    border-radius: 50%;
+    padding: 15px;
+    box-sizing: border-box;
+    text-decoration: none;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 3);
+    background: linear-gradient(0deg,#eca234,#f9ba5c); /*#ddd, #fff*/
+    transition: .5s;
+    /*color: #000 ;
+    font-size: 2em;
+    margin-right: 20px;
+    */
+  }
+  nav.redes-sociales a:hover{
+    box-shadow: 0 2px 5px rgba(0, 0, 0,3);
+    text-decoration: none;
+  }
+
+  nav.redes-sociales a .fab{
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: linear-gradient(0deg, #f9ba5c, #eca234);
+    border-radius: 50%;
+    line-height: calc(65px - 5px);
+    font-size: 24px;
+    color: #262626;
+    transition: .5s;
+
+  }
+
+  nav.redes-sociales a:hover:nth-child(1) .fab{
+    color: #3b5998;
+  }
+  nav.redes-sociales a:hover:nth-child(2) .fab{
+   
+    color: #EE1D52;;
+  }
+  nav.redes-sociales a:hover:nth-child(3) .fab{
+    color: #BD081C;
+  }
+  nav.redes-sociales a:hover:nth-child(4) .fab{
+    color: #FF0000;
+  }
+  nav.redes-sociales a:hover:nth-child(5) .fab{
+    color: #E1306C;
+    /*background: linear-gradient(191deg, rgba(64,93,230,1) 6%, rgba(88,81,219,1) 18%, rgba(131,58,180,1) 29%, rgba(193,53,132,1) 45%, rgba(225,48,108,1) 55%, rgba(253,29,29,1) 68%, rgba(245,96,64,1) 75%, rgba(247,119,55,1) 82%, rgba(252,175,69,1) 91%, rgba(255,220,128,1) 100%);*/
+
+  }
+
+  div.informacion-evento {
+    text-align: center;
+    color: #ffffff;
+  }
+  p.slogan {
+    text-align: center !important;
+    text-transform: none!important;
+    margin-top: 0px;
+    font-size: 5vw;
+  }
+  p.slogan span {
+    font-weight: bold;
+  }
+  @media only screen and (min-width:768px) {
+    p.slogan {
+      text-align: right !important;
+      text-transform: none!important;
+      margin-top: -300px;
+      margin-right: 30px;
+      font-size: 2vw;
+    }
+  }
+  h1.nombre-sitio {
+    font-size: 5.9vw;
+    text-transform: uppercase;
+    font-family: 'PT Sans', sans-serif;
+    color: #fe4918;
+  }
+  @media only screen and (min-width:768px) {
+    h1.nombre-sitio {
+      font-size: 11.5vw;
+      margin: 0;
+      line-height: 1;
+    }
+  }
+  img.pet-rock-letras{
+    width: 42vh;
+    height: 17vh;
+  }
+  @media only screen and (min-width:768px) {
+    img.pet-rock-letras{
+    width: 60vh;
+    height: 20vh;
+  }
+  }
+  img.mascota{
+    text-align: center;
+    align-content:center;
+    width: 35vh;
+    height: 35vh;
+    background-position: top center;
+    background-size: cover;
+  }
+  @media only screen and (min-width:768px) {
+    img.mascota{
+      width: 40vh;
+      height: 40vh;
+    }
+  }
+  /*Barra*/
+  div.barra {
+    background-color: #1f3b67e3; /*1f3b67e3 - azul*/
+    padding: 20px 0;
+    
+  }
+  .fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+  div.logo{
+    width: 80%;
+    float: left;
+  }
+  div.logo img {
+    width: 100%;
+  }
+  div.logo h3{
+    margin: 0;
+    text-align: center;
+    font-size: vw;
+    text-transform: uppercase;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: bold;
+    color: #eca234;/*fe4918 - naranja*/
+  }
+  @media only screen and (min-width:768px) {
+  div.logo h3{
+    margin: 0;
+    text-align: center;
+    padding: 10px;
+    font-size: 3vw;
+    text-transform: uppercase;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: bold;
+    color: #eca234;/*fe4918 - naranja*/
+  }
+  }
+  
+  @media only screen and (min-width:768px) {
+    div.logo {
+      width:33%;
+  
+    }
+  }
+  /** Nav principal **/
+  
+  nav.navegacion-principal {
+    display: none;
+    width: 100%;
+  }
+  nav.navegacion-principal a {
+     font-family: 'Oswald', sans-serif;
+     color: #ffffff;
+     font-size: 1.3em;
+     text-transform: uppercase;
+     text-decoration: none;
+     transition: all .6s ease;
+     width: 100%;
+     display: block;
+     text-align: center;
+     margin-bottom: 20px;
+     margin-top: auto;
+     clear: both;
+  }
+  nav.navegacion-principal a:hover {
+    background-color: #eca234;
+    border-radius: 50px;
+    
+  }
+  nav.navegacion-principal a:last-child {
+    border: 2px solid #eca234;
+    border-radius: 50px;
+    color: #eca234;
+  }
+  nav.navegacion-principal a:last-child:hover {
+    color: #ffffff;
+  }
+  @media only screen and (min-width:768px) {
+    nav.navegacion-principal {
+      width: 100%;
+      float: right;
+      text-align: right;
+      display: block;
+    }
+    nav.navegacion-principal a {
+      padding: 10px 10px;
+      display: inline-flex;
+      width:auto;
+      display: inline-block;
+      text-align: center;
+      margin:0 10px 0 0;
+    }
+  }
+  
+   
+
+  .topnav {
+    overflow: hidden;
+    position: relative;
+  }
+  @media only screen and (min-width: 768px) {
+    .topnav {
+        display: none;
+    }
+}
+  /* Hide the links inside the navigation menu (except for logo/home) */
+  .topnav #myLinks {
+    display: none;
+    margin-top: 50px;
+  }
+  
+  nav.navegacion-principal a:hover {
+    background-color: #eca234;
+    border-radius: 50px;
+    
+  }
+  nav.navegacion-principal a:last-child {
+    border: 2px solid #eca234;
+    border-radius: 50px;
+    color: #eca234;
+  }
+ 
+  /* Style navigation menu links */
+ 
+  .topnav a {
+    padding: 14px 16px;
+    font-size: 17px;
+    display: block;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all .6s ease;
+    margin-top: auto;
+    clear: both;
+  }
+  #myLinks a:hover {
+    background-color: #eca234;
+    border-radius: 50px;
+    
+  }
+  #myLinks a:last-child {
+    border: 2px solid #eca234;
+    border-radius: 50px;
+    color: #eca234;
+  }
+  #myLinks a:last-child:hover {
+    color: #ffffff;
+  }
+
+
+  /* Style the hamburger menu */
+  .topnav a.icon {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  /* Style the active link (or home/logo) */
+  .active {
+    color: white;
+  }
+
+
+  .center {
+    top: 100%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 50px;
+    transition: 0.5s;
+
+  }
+  
+  .center:before,
+  .center:after,
+  .center div {
+    background: #fff;
+    content: "";
+    display: block;
+    height: 6px;
+    border-radius: 3px;
+    margin: 7px 0;
+    transition: 0.5s;
+  }
+  .center:hover:before {
+    transform: translateY(12px) rotate(135deg);
+  }
+  .center:hover:after {
+    transform: translateY(-12px) rotate(-135deg);
+  }
+  .center:hover div {
+    transform: scale(0);
+  }
+  
+
+  
+  /*Quienes somos*/
+
+  div.quienes-somos {
+    background-image: url(../img/fondo.jpeg); 
+    height: 60vh;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  div.texto-quienes-somos {
+    width: 100%;
+  }
+  div.texto-quienes-somos h2{
+    color: #1f3b67e3;
+    padding: 50px 20px;
+    text-align: center;
+  }
+  div.perro{
+    display: none;
+  }
+  div.mascota-alternativa{
+    text-align: center;
+  }
+  div.mascota-alternativa img{
+    width: 25vh;
+    height: 25vh;
+  }
+  @media only screen and (min-width: 768px) {
+    div.mascota-alternativa {
+      width: 50%;
+      float: right;
+      margin-top: 30px;
+    }
+    div.mascota-alternativa img{
+      width: 35vh;
+      height: 35vh;
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    div.texto-quienes-somos {
+      width: 50%;
+      float: left;
+    }
+  }
+  div.texto-quienes-somos p{
+    color: #1f3b67e3;
+    
+    text-align: center;
+  }
+  div.perro {
+    width: 50%;
+    float: right;
+    margin-top: -250px;
+    
+  }
+  
+  /*Video*/
+  section.video {
+    
+  }
+  div.contenedor-video{
+    margin-top: 20px;
+    position: relative;
+  }
+  div.contenedor-video video{
+    width: 100%;
+    overflow-x: hidden;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  div.contenido-hace-tu-pedido{
+    position: absolute;
+    top: 40%;
+    left: 37%;
+    height: 100%;
+    width: 100%;
+  }
+  /*
+  div.boton-wpp{
+    width: 100px;
+    height: 40px;
+    background-color: #25D366;
+    border: 1px solid #25D366;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 27px;
+    padding: 10px;
+    
+  }
+  div.boton-wpp a{
+    width: 100%;
+    margin-top: -9px;
+    font-size: 1.5rem;
+    text-align: center;
+    float: left;
+  }
+  div.boton-wpp a i{
+    color: #fff;
+    text-align: center;
+  }
+  */
+  div.contenido-hace-tu-pedido{
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    height: 100%;
+    width: 100%;
+  }
+  
+  div.boton-wpp a {
+    position: relative;
+    width: 25%;
+    height: 10%;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50px;
+    padding: 15px;
+    box-sizing: border-box;
+    text-decoration: none;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 3);
+    background: linear-gradient(0deg,#4FCE5D,#6ddd7a); /*#ddd, #fff*/
+    transition: .5s;
+  
+  }
+  div.boton-wpp a:hover{
+    box-shadow: 0 2px 5px rgba(0, 0, 0,3);
+    text-decoration: none;
+  }
+
+  div.boton-wpp a .fab{
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: linear-gradient(0deg, #6ddd7a, #4FCE5D);
+    border-radius: 50px;
+    line-height: calc(65px - 5px);
+    font-size: 200%;
+    color: #fff;
+    transition: .5s;
+
+  }
+
+  div.boton-wpp a:hover:nth-child(1) .fab{
+    color: #000;
+  }
+  
+  @media only screen and (min-width:768px) {
+    div.boton-wpp{
+    text-align: left;
+  }
+  div.boton-wpp a {
+    margin-top: 40px;
+  }
+  }
+
+  @media only screen and (min-width:2000px) {
+    
+  div.boton-wpp a {
+    margin-top: 75px;
+  }
+  }
+  
+  /*Mapa*/
+  div.mapa {
+    margin-top: 20px;
+    height: 420px;
+  }
+  /*Footer*/
+  
+  footer {
+    background-color: #1f3b67e3;
+    padding-top: 40px;    
+  }
+  footer .mascota-footer{
+    width: 200px;
+    height: 200px;
+  }
+  footer .contenedor > div {
+    color: #ffffff;
+    padding: 0px 20px;
+    font-size: 12px;
+  }
+  @media only screen and (min-width:768px){
+    footer .contenedor > div {
+        width: 33.3%;
+        float: left;
+    }
+  }
+  
+  footer h3 {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 20px;
+  }
+  footer h3 span {
+    color: #eca234;
+  }
+  footer .ultimos-tweets li {
+    margin-bottom: 10px;
+  }
+ 
+  footer nav.redes-sociales-footer {
+    text-align: left;
+  }
+  nav.redes-sociales-footer {
+    text-align: center;
+  }
+  nav.redes-sociales-footer a {
+    color: #ffffff;
+    font-size: 2em;
+    margin-right: 20px;
+    
+  }
+  nav.redes-sociales-footer a:last-child{
+    margin-right: 0;
+  }
+  
+  nav.redes-sociales-footer a:hover:nth-child(1) .fab{
+    transition: .5s;
+    color: #3b5998;
+  }
+  nav.redes-sociales-footer a:hover:nth-child(2) .fab{
+    transition: .5s;
+    color: #EE1D52;;
+  }
+  nav.redes-sociales-footer a:hover:nth-child(3) .fab{
+    transition: .5s;
+    color: #BD081C;
+  }
+  nav.redes-sociales-footer a:hover:nth-child(4) .fab{
+    transition: .5s;
+    color: #FF0000;
+  }
+  nav.redes-sociales a:hover:nth-child(5) .fab{
+    transition: .5s;
+    color: #E1306C;
+    /*background: linear-gradient(191deg, rgba(64,93,230,1) 6%, rgba(88,81,219,1) 18%, rgba(131,58,180,1) 29%, rgba(193,53,132,1) 45%, rgba(225,48,108,1) 55%, rgba(253,29,29,1) 68%, rgba(245,96,64,1) 75%, rgba(247,119,55,1) 82%, rgba(252,175,69,1) 91%, rgba(255,220,128,1) 100%);*/
+
+  }
+  p.copyright {
+    background-color: #2e2e2e;
+    color: #ffffff;
+    padding: 10px 0;
+    margin:20px 0 0 0;
+    text-align: center;
+  }
+   
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+  display: none !important;
+}
+
+/*
+* Hide only visually, but have it available for screen readers:
+* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+*
+* 1. For long content, line feeds are not interpreted as spaces and small width
+*    causes content to wrap 1 word per line:
+*    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+*/
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+* Extends the .sr-only class to allow the element
+* to be focusable when navigated to via the keyboard:
+* https://www.drupal.org/node/897638
+*/
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+* Hide visually and from screen readers, but maintain layout
+*/
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+* Clearfix: contain floats
+*
+* For modern browsers
+* 1. The space content is one way to avoid an Opera bug when the
+*    `contenteditable` attribute is included anywhere else in the document.
+*    Otherwise it causes space to appear at the top and bottom of elements
+*    that receive the `clearfix` class.
+* 2. The use of `table` rather than `block` is only necessary if using
+*    `:before` to contain the top-margins of child elements.
+*/
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+  pre {
+    white-space: pre-wrap !important;
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  /*
+     * Printing Tables:
+     * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
